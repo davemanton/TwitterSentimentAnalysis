@@ -1,4 +1,5 @@
 ﻿using Common;
+using Data.Analysis;
 using Data.Preparation;
 using Unity;
 
@@ -12,9 +13,13 @@ namespace App
 
             container
                 .RegisterType<IAppSettings, AppSettings>()
+                .RegisterType<IFileManager, FileManager>()
                 .RegisterType<IDataPreparer, DataPreparer>()
-                .RegisterType<IStanfordCoreNlpFactory, StanfordCoreNlpFactory>()
                 .RegisterType<ITextFormatter, TextFormatter>()
+                .RegisterType<IDataAnalyser, DataAnalyser>()
+                .RegisterType<IStanfordCoreNlpFactory, StanfordCoreNlpFactory>()
+                .RegisterType<IClassificationFrequencyAnalyser, ClassificationFrequencyAnalyser>()
+                .RegisterType<ILemmaAnalyser, LemmaAnalyser>()
                 ;
 
             return container;

@@ -13,6 +13,7 @@ namespace Common
         string StanfordModelDirectory { get; }
         string RawDataPath { get; }
         string ProcessedDataPath { get; }
+        string StopWordsFilePath { get; }
     }
 
     public class AppSettings : IAppSettings
@@ -20,6 +21,7 @@ namespace Common
         public string StanfordModelDirectory => GetAppSetting("StanfordModelDirectory");
         public string RawDataPath => Path.Combine(RawDataDirectory, GetAppSetting("RawDataFilename"));
         public string ProcessedDataPath => Path.Combine(ProcessedDataDirectory, GetAppSetting("ProcessedDataFilename"));
+        public string StopWordsFilePath => GetAppSetting("StopWordsFilePath");
 
         private static string RawDataDirectory => GetAppSetting("RawDataDirectory");
         private static string ProcessedDataDirectory => GetAppSetting("ProcessedDataDirectory");

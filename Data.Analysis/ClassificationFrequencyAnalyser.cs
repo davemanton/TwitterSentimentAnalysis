@@ -29,7 +29,7 @@ namespace Data.Analysis
         {
             var barChart = DataBarBox.Show(
                 values.Keys,
-                values.Values.Cast<double>().ToArray());
+                values.Values.Select(Convert.ToDouble).ToArray());
 
             barChart.SetTitle(title);
         }

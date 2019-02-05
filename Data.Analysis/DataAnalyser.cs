@@ -2,7 +2,7 @@
 using Common;
 using Deedle;
 
-namespace Data.Analysis
+namespace Data.Analysis 
 {
     public interface IDataAnalyser
     {
